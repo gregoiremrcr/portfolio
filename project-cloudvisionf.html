@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CloudVision — Fiche projet</title>
+    <style>
+      body { margin: 0; background: #101112; color: #ededec; font-family: Arial, Helvetica, sans-serif; }
+      .page { max-width: 980px; margin: 0 auto; padding: 80px 24px 120px; }
+      .back { display: inline-block; margin-bottom: 28px; color: #a5a7a3; text-decoration: none; }
+      .card { border: 1px solid #d7d2c7; background: #17191b; padding: 32px; }
+      h1 { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(40px, 6vw, 64px); font-weight: 500; }
+      h2 { margin: 28px 0 12px; font-size: 24px; color: #ededec; }
+      p, li { color: #a5a7a3; line-height: 1.8; }
+      ul { margin: 0 0 0 20px; padding: 0; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 18px; }
+      .meta span { border: 1px solid rgba(237,237,236,.2); padding: 8px 10px; font: 10px "Courier New", Courier, monospace; color: #c7c9c4; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 22px; }
+      .block { border: 1px solid rgba(237,237,236,.18); background: rgba(255,255,255,.02); padding: 22px 20px; }
+      .eyebrow { font: 11px "Courier New", Courier, monospace; color: #a5a7a3; letter-spacing: .08em; text-transform: uppercase; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <a class="back" href="/">← Retour au portfolio</a>
+      <div class="card">
+        <p class="eyebrow">IA · VISION PAR ORDINATEUR</p>
+        <h1>CloudVision</h1>
+        <p>
+          CloudVision est une plateforme web fullstack qui permet d’envoyer une image et de
+          la transformer en description exploitable via intelligence artificielle. Le projet met
+          en œuvre une logique d’analyse visuelle, de traitement de données et de restitution de
+          résultats accessibles à partir d’une interface simple.
+        </p>
+        <div class="meta">
+          <span>React</span>
+          <span>Python</span>
+          <span>Flask</span>
+          <span>OpenAI API</span>
+          <span>OpenCV</span>
+          <span>Tesseract</span>
+          <span>MongoDB</span>
+          <span>Docker</span>
+        </div>
+
+        <div class="grid">
+          <div class="block">
+            <h2>Contexte</h2>
+            <p>
+              Le projet a été pensé comme une démonstration concrète d’intégration IA dans une
+              application web. L’idée est de permettre à un utilisateur d’uploader une image, puis
+              d’obtenir une analyse automatique avec le support de modèles d’IA visuelle.
+            </p>
+          </div>
+
+          <div class="block">
+            <h2>Objectif</h2>
+            <p>
+              Rendre accessible une analyse d’image intelligible, en associant interface web,
+              traitement Python, extraction de contenu visuel et restitution sous forme de texte,
+              voire de synthèse vocale.
+            </p>
+          </div>
+        </div>
+
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+          <li>Upload d’images depuis l’interface web.</li>
+          <li>Analyse automatique par GPT-4 Vision pour produire une description détaillée.</li>
+          <li>Reconnaissance optique de texte via Tesseract pour extraire du contenu lisible.</li>
+          <li>Traitement d’image avec OpenCV pour préparer les données avant analyse.</li>
+          <li>Stockage des résultats dans MongoDB pour conserver historique et résultats.</li>
+          <li>Application Flask + React structurée et déployable avec Docker.</li>
+        </ul>
+
+        <h2>Architecture</h2>
+        <p>
+          Le projet s’articule autour d’une API backend Python/Flask, d’une interface frontend
+          React, d’une base MongoDB ainsi que d’outils de prétraitement image. L’API prend en
+          charge l’analyse des fichiers uploadés et renvoie des résultats structurés. L’interface
+          permet de lancer l’analyse, consulter les réponses et mettre en valeur les contenus
+          interprétés par l’IA.
+        </p>
+
+        <h2>Valeur métier</h2>
+        <p>
+          Au-delà du cadre pédagogique, ce projet illustre bien l’utilisation de l’IA dans un
+          contexte d’accessibilité et de compréhension visuelle. Il montre comment des données
+          multimédias peuvent être transformées en informations compréhensibles et exploitables,
+          avec une interface simple et une base technique claire.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IoT / MQTT — Fiche projet</title>
+    <style>
+      body { margin: 0; background: #101112; color: #ededec; font-family: Arial, Helvetica, sans-serif; }
+      .page { max-width: 980px; margin: 0 auto; padding: 80px 24px 120px; }
+      .back { display: inline-block; margin-bottom: 28px; color: #a5a7a3; text-decoration: none; }
+      .card { border: 1px solid #d7d2c7; background: #17191b; padding: 32px; }
+      h1 { margin: 0 0 18px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(40px, 6vw, 64px); font-weight: 500; }
+      h2 { margin: 28px 0 12px; font-size: 24px; color: #ededec; }
+      p, li { color: #a5a7a3; line-height: 1.8; }
+      ul { margin: 0 0 0 20px; padding: 0; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 18px; }
+      .meta span { border: 1px solid rgba(237,237,236,.2); padding: 8px 10px; font: 10px "Courier New", Courier, monospace; color: #c7c9c4; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; margin-top: 22px; }
+      .block { border: 1px solid rgba(237,237,236,.18); background: rgba(255,255,255,.02); padding: 22px 20px; }
+      .eyebrow { font: 11px "Courier New", Courier, monospace; color: #a5a7a3; letter-spacing: .08em; text-transform: uppercase; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <a class="back" href="/">← Retour au portfolio</a>
+      <div class="card">
+        <p class="eyebrow">IOT · TEMPS RÉEL</p>
+        <h1>IoT / MQTT</h1>
+        <p>
+          Ce projet a pour objectif de visualiser des données IoT en temps réel à partir de
+          stations météo connectées. Il met en place un système de publication MQTT, de bridge
+          de données et d’interface utilisateur pour suivre l’état des capteurs et la santé des
+          équipements connectés.
+        </p>
+        <div class="meta">
+          <span>SvelteKit</span>
+          <span>Node.js</span>
+          <span>MQTT</span>
+          <span>WebSocket</span>
+          <span>ESP32</span>
+          <span>Bridge WS</span>
+        </div>
+
+        <div class="grid">
+          <div class="block">
+            <h2>Contexte</h2>
+            <p>
+              Le dépôt illustre une architecture IoT classique : des capteurs publient des données
+              via MQTT, un bridge les récupère et les transmet au frontend au travers de WebSockets,
+              puis l’interface affiche l’état de plusieurs stations en temps réel.
+            </p>
+          </div>
+
+          <div class="block">
+            <h2>Objectif</h2>
+            <p>
+              Suivre la météo et le statut des stations de manière claire, en identifiant les
+              appareils connectés, leur activité et leur disponibilité sur une interface dédiée.
+            </p>
+          </div>
+        </div>
+
+        <h2>Fonctionnalités</h2>
+        <ul>
+          <li>Bridge Node.js dédié à la réception MQTT et à la diffusion via WebSocket.</li>
+          <li>Frontend SvelteKit pour l’affichage des stations météo et un panneau Flipper.</li>
+          <li>Monitoring du statut “online/offline” selon la présence de nouvelles données.</li>
+          <li>Gestion des topics MQTT et définition des payloads de manière structurée.</li>
+          <li>Affichage d’informations temps réel via des données en provenance de capteurs.</li>
+        </ul>
+
+        <h2>Architecture</h2>
+        <p>
+          La logique du projet repose sur une séparation nette entre la couche de collecte,
+          le broker MQTT, le bridge WebSocket et l’interface utilisateur. Cette structure permet
+          de sécuriser le flux de données, de faciliter la maintenance et d’isoler la logique de
+          communication du rendu visuel.
+        </p>
+
+        <h2>Résultat</h2>
+        <p>
+          Le projet démontre une mise en œuvre concrète d’une application IoT sur plusieurs couches,
+          de la collecte des données jusqu’à leur visualisation. Il met aussi en avant les concepts
+          essentiels de supervision temps réel, d’intégration de capteurs et de robustesse des flux
+          de données dans un environnement connecté.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

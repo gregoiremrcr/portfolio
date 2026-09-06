@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robotique — Fiche projet</title>
+    <style>
+      body {
+        margin: 0;
+        background: #101112;
+        color: #ededec;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 80px 24px 120px;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: #a5a7a3;
+        text-decoration: none;
+      }
+      .card {
+        border: 1px solid #d7d2c7;
+        background: #17191b;
+        padding: 32px;
+      }
+      h1 {
+        margin: 0 0 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(40px, 6vw, 64px);
+        font-weight: 500;
+      }
+      h2 {
+        margin: 28px 0 12px;
+        font-size: 24px;
+        color: #ededec;
+      }
+      p, li {
+        color: #a5a7a3;
+        line-height: 1.8;
+      }
+      ul {
+        margin: 0 0 0 20px;
+        padding: 0;
+      }
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 24px 0 18px;
+      }
+      .meta span {
+        border: 1px solid rgba(237,237,236,.2);
+        padding: 8px 10px;
+        font: 10px "Courier New", Courier, monospace;
+        color: #c7c9c4;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+        margin-top: 22px;
+      }
+      .block {
+        border: 1px solid rgba(237,237,236,.18);
+        background: rgba(255,255,255,.02);
+        padding: 22px 20px;
+      }
+      .eyebrow {
+        font: 11px "Courier New", Courier, monospace;
+        color: #a5a7a3;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <a class="back" href="/">← Retour au portfolio</a>
+      <div class="card">
+        <p class="eyebrow">ROBOTIQUE · AUTONOMIE</p>
+        <h1>Robotique</h1>
+        <p>
+          Robotique est un prototype de robot d’assistance autonome conçu pour permettre
+          à un opérateur de créer une mission, de la suivre en temps réel et de superviser
+          l’exécution d’une tâche complète : navigation, reconnaissance QR, prise d’objet,
+          transport puis dépose.
+        </p>
+        <div class="meta">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>PHP</span>
+          <span>MySQL</span>
+          <span>ROS 2</span>
+          <span>WebSocket</span>
+          <span>Docker</span>
+        </div>
+
+        <div class="grid">
+          <div class="block">
+            <h2>Contexte</h2>
+            <p>
+              Le projet vise à démontrer une chaîne logicielle complète autour d’un robot
+              logistique : interface web pour piloter des missions, API backend pour gérer
+              les données, échanges temps réel, et robot autonome piloté par ROS 2.
+            </p>
+          </div>
+
+          <div class="block">
+            <h2>Objectif</h2>
+            <p>
+              Créer un système cohérent dans lequel une mission peut être planifiée,
+              affectée au robot, exécuter la navigation, identifier un objet grâce au QR,
+              effectuer la prise puis finaliser le dépôt en sécurité.
+            </p>
+          </div>
+        </div>
+
+        <h2>Fonctionnalités principales</h2>
+        <ul>
+          <li>Dashboard React/TypeScript pour créer, consulter et supprimer des missions.</li>
+          <li>Gestion des statuts et transitions de mission via une logique claire et supervisable.</li>
+          <li>Suivi temps réel des événements, erreurs, position et état du robot.</li>
+          <li>Mission complète en mode simulation puis en mode réel avec navigation, lecture QR, prise, transport et dépose.</li>
+          <li>Arrêt d’urgence logiciel et vérification de sécurité avec timeout heartbeat.</li>
+        </ul>
+
+        <h2>Architecture</h2>
+        <p>
+          Le dépôt est structuré autour de trois éléments majeurs : le frontend web, une API
+          REST PHP/MySQL, et un environnement ROS 2 pour le robot. Le WebSocket permet de
+          synchroniser l’état des missions et d’afficher les événements en direct depuis le
+          dashboard. Cette séparation permet de garder une logique claire entre interface,
+          orchestration métier et partie robotique.
+        </p>
+
+        <h2>Résultat</h2>
+        <p>
+          Le système a été validé avec des tests intégrés et une exécution complète du workflow,
+          notamment en mode faux robot puis sur le robot réel. Le projet montre un vrai parcours
+          d’intégration complexe : interface, backend, communication temps réel, robotique autonome,
+          vision et automatisation.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
