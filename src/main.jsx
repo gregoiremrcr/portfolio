@@ -312,27 +312,12 @@ function ProjectVisual({ type }) {
 
   if (type === "robot") {
     return (
-      <div className="robot-ui">
-        <div className="robot-map">
-          <span className="waypoint w1" />
-          <span className="waypoint w2" />
-          <span className="waypoint w3" />
-          <span className="route-line" />
-        </div>
-        <div className="robot-bot">
-          <span className="bot-head">
-            <i className="eye" />
-            <i className="eye" />
-          </span>
-          <span className="bot-arm arm-left" />
-          <span className="bot-arm arm-right" />
-          <span className="bot-base" />
-        </div>
-        <div className="robot-panel">
-          <small>MISSION</small>
-          <strong>ROBOT IQ</strong>
-          <span>navigation · qr · prise</span>
-        </div>
+      <div className="robot-photo-frame">
+        <img
+          className="robot-photo"
+          src="/robotique-vf.jpg"
+          alt="RobotiqueVF robot prototype"
+        />
       </div>
     );
   }

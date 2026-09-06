@@ -442,76 +442,17 @@ h2 span,
 .data-card b { font: 12px var(--mono); font-weight: 400; color: var(--text); }
 .robot-panel strong { font-size: 20px; }
 
-.robot-ui { background: #1c1e1d; }
-.robot-map {
+.robot-photo-frame {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(237,237,236,.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(237,237,236,.08) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background: #1c1e1d;
 }
-.waypoint {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: var(--accent-2);
-  border: 1px solid var(--line);
-}
-.w1 { left: 24%; top: 26%; }
-.w2 { right: 27%; top: 35%; }
-.w3 { left: 43%; bottom: 22%; }
-.route-line {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(125deg, transparent 0 36%, var(--accent) 36% 37%, transparent 37% 62%, var(--accent) 62% 63%, transparent 63%);
-  transform: rotate(-8deg) scale(1.15);
-}
-.robot-bot {
-  position: absolute;
-  left: 50%;
-  top: 52%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 180px;
-}
-.bot-head {
-  position: absolute;
-  left: 50%;
-  top: 32px;
-  transform: translateX(-50%);
-  width: 95px;
-  height: 52px;
-  border: 1px solid var(--line);
-  background: #202326;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-}
-.eye {
-  width: 12px;
-  height: 12px;
-  background: var(--accent);
-}
-.bot-arm {
-  position: absolute;
-  top: 86px;
-  width: 18px;
-  height: 56px;
-  background: #737a78;
-}
-.arm-left { left: 18px; transform: rotate(26deg); }
-.arm-right { right: 18px; transform: rotate(-26deg); }
-.bot-base {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 70px;
-  border: 1px solid var(--line);
-  background: #202326;
+.robot-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9) contrast(1.05);
 }
 
 .iot-ui { background: #171f24; padding: 34px; }
