@@ -655,18 +655,134 @@ footer a:hover { color: var(--text); }
 @media (max-width: 560px) {
   .section,
   footer { width: min(100% - 30px, 1160px); }
-  .hero h1 { font-size: 46px; }
+  .hero h1 { font-size: clamp(32px, 8vw, 46px); }
   .hero-text { font-size: 15px; }
   .hero-actions { flex-wrap: wrap; }
   .button { width: 100%; }
   .projects { padding: 100px 0; }
-  .project-content h3 { font-size: 38px; }
+  .project-content h3 { font-size: clamp(28px, 7vw, 38px); }
   .project-visual { min-height: 290px; }
-  .contact h2 { font-size: 43px; }
-  footer { flex-wrap: wrap; gap: 10px; }
+  .section-heading { display: block; margin-bottom: 40px; }
+  .cv .section-heading { display: block; }
   .section-heading h2,
   .about h2,
   .contact h2 {
     font-size: clamp(32px, 9vw, 46px);
+  }
+  .section-intro { margin-top: 18px; font-size: 14px; }
+  .contact h2 { font-size: 43px; }
+  .contact-box { padding: 40px 20px; }
+  .contact-details { grid-template-columns: 1fr; }
+  .contact-details a,
+  .contact-details div {
+    min-height: auto;
+    padding: 18px 16px;
+  }
+  footer { flex-wrap: wrap; gap: 10px; }
+}
+
+@media (max-width: 420px) {
+  .app {
+    background:
+      linear-gradient(90deg, rgba(237,237,236,.025) 1px, transparent 1px) 0 0 / 44px 44px,
+      var(--bg);
+  }
+  .section,
+  footer { width: min(100% - 20px, 1160px); padding: 0 10px; }
+  .nav { padding: 0 10px; }
+  .hero { padding-top: 100px; padding-bottom: 40px; }
+  .hero h1 { 
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.05;
+    margin: 14px 0 16px;
+    word-break: break-word;
+  }
+  .hero-text { font-size: 14px; line-height: 1.6; }
+  .kicker { font-size: 10px; gap: 8px; }
+  .button { 
+    min-height: 44px; 
+    padding: 0 16px;
+    font-size: 14px;
+  }
+  .button span { display: none; }
+  .hero-terminal {
+    box-shadow: 6px 6px 0 #2d3033;
+    margin-top: 20px;
+  }
+  .terminal-body { 
+    padding: 18px 20px 22px;
+    font-size: 11px;
+    min-height: 260px;
+  }
+  .scroll-hint { margin-top: 40px; font-size: 9px; }
+  .projects { padding: 80px 0; }
+  .section-heading {
+    display: block !important;
+    margin-bottom: 30px;
+  }
+  .cv .section-heading {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+  .cv .section-heading > p {
+    margin-top: 12px;
+  }
+  .section-heading h2,
+  .about h2,
+  .contact h2 {
+    font-size: clamp(24px, 7vw, 36px);
+    line-height: 1.1;
+    margin: 8px 0 0;
+  }
+  .section-intro { 
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .eyebrow { 
+    font-size: 10px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .project-content { padding: 28px 20px; }
+  .project-content h3 { font-size: clamp(22px, 6vw, 28px); margin: 6px 0 12px; }
+  .project-content > p { font-size: 13px; margin: 0 0 18px; }
+  .tags { gap: 5px; margin-bottom: 24px; }
+  .tags span { font-size: 9px; padding: 6px 8px; }
+  .project-links { gap: 12px 14px; }
+  .project-link { font-size: 10px; }
+  .cv { padding: 24px 0 80px; }
+  .cv-card { padding: 20px 18px; }
+  .cv-card ul { font-size: 13px; }
+  .cv-download { margin-bottom: 20px; }
+  .about { 
+    gap: 40px;
+    padding: 80px 0 120px;
+  }
+  .about h2 { font-size: clamp(28px, 8vw, 36px); }
+  .skill-row {
+    grid-template-columns: 35px 1fr;
+    gap: 10px;
+    padding: 16px 0;
+  }
+  .skill-row > span { font-size: 8px; }
+  .skill-row b { font-size: 13px; }
+  .skill-row p { font-size: 11px; }
+  .contact { padding-bottom: 80px; }
+  .contact h2 { font-size: clamp(28px, 8vw, 36px); }
+  .contact-box { 
+    padding: 30px 18px; 
+    box-shadow: 4px 4px 0 #2d3033;
+  }
+  .contact-box > p:not(.eyebrow) { 
+    font-size: 13px;
+    margin: 16px 0 18px;
+    line-height: 1.5;
+  }
+  footer { 
+    font-size: 9px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 0 25px;
   }
 }
