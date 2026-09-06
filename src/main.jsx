@@ -56,6 +56,7 @@ const skills = [
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -67,6 +68,11 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleNavClick = (id) => {
+    scrollTo(id);
+    setMenuOpen(false);
+  };
+
   return (
     <div className="app">
       <div className="noise" aria-hidden="true" />
@@ -75,11 +81,23 @@ function App() {
           GM<span>.</span>
         </button>
         <div className="nav-name" aria-label="Nom du portfolio">Grégoire MERCIER</div>
-        <nav>
-          <button onClick={() => scrollTo("projects")}>Projets</button>
-          <button onClick={() => scrollTo("cv")}>CV</button>
-          <button onClick={() => scrollTo("about")}>À propos</button>
-          <button onClick={() => scrollTo("contact")}>Contact</button>
+
+        <button
+          className="nav-toggle"
+          aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav className={`nav-menu ${menuOpen ? "is-open" : ""}`}>
+          <button onClick={() => handleNavClick("projects")}>Projets</button>
+          <button onClick={() => handleNavClick("cv")}>CV</button>
+          <button onClick={() => handleNavClick("about")}>À propos</button>
+          <button onClick={() => handleNavClick("contact")}>Contact</button>
           <a href={GITHUB} target="_blank" rel="noreferrer">GitHub ↗</a>
         </nav>
       </header>
